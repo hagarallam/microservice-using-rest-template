@@ -19,8 +19,8 @@ public class UserServiceImplUsingExchange implements UserService{
     @Value("${base-url}")
     private String baseUrl ;
 
-    public UserServiceImplUsingExchange() {
-        this.restTemplate = new RestTemplate();
+    public UserServiceImplUsingExchange(RestTemplate restTemplate) {
+        this.restTemplate = restTemplate;
     }
 
 

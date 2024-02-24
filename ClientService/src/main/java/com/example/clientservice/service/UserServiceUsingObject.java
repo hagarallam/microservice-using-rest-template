@@ -18,8 +18,8 @@ public class UserServiceUsingObject implements UserService{
     @Value("${base-url}")
     private String baseUrl ;
 
-    public UserServiceUsingObject() {
-        this.restTemplate = new RestTemplate();
+    public UserServiceUsingObject(RestTemplate restTemplate) {
+        this.restTemplate = restTemplate;
     }
 
     @Override

@@ -17,8 +17,8 @@ public class UserServiceImplUsingEntity implements UserService{
     @Value("${base-url}")
     private String baseUrl ;
 
-    public UserServiceImplUsingEntity() {
-        this.restTemplate = new RestTemplate();
+    public UserServiceImplUsingEntity(RestTemplate restTemplate) {
+        this.restTemplate = restTemplate;
     }
 
     @Override
