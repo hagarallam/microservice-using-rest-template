@@ -5,11 +5,15 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
 
+import java.time.Duration;
+
 @Configuration
 public class Config {
 
     @Bean
     public RestTemplate restTemplate(RestTemplateBuilder builder){
-        return builder.build();
+        return builder
+                .setReadTimeout(Duration.ofMillis(1000))
+                .build();
     }
 }
